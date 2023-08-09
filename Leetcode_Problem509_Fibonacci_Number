@@ -1,0 +1,27 @@
+int fib(int n){
+    if(n == 0)
+        return 0;
+    if(n == 1)
+        return 1;
+    int i = 2,num1 = 0,num2 = 1,fib;
+    while(i != (n+1))
+    {
+        fib = num1 + num2;
+        num1 = num2;
+        num2 = fib;
+        i++;
+    }
+    return fib;
+}
+
+
+-----------------------------------------------------------------------------------------------------------------------
+
+
+int fib(int n){
+    if(n == 0)
+        return 0;
+    if(n == 1)
+        return 1;
+    return fib(n-1)+fib(n-2);
+}
